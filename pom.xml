@@ -29,11 +29,16 @@
 			<artifactId>commons-dbcp</artifactId>
 			<version>1.4</version>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>informix</groupId> -->
-<!-- 			<artifactId>ifxjdbc</artifactId> -->
-<!-- 			<version>11.4</version> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId>informix</groupId>
+			<artifactId>ifxjdbc</artifactId>
+			<version>11.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -48,15 +53,15 @@
 	</dependencies>
 	<build>
 		<finalName>cancela-nomina</finalName>
-<!-- 		<resources> -->
-<!-- 			<resource> -->
-<!-- 				<directory>src/main/resources</directory> -->
-<!-- 				<excludes> -->
-<!-- 					<exclude>*.properties</exclude> -->
-<!-- 					<exclude>config/</exclude> -->
-<!-- 				</excludes> -->
-<!-- 			</resource> -->
-<!-- 		</resources> -->
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>*.properties</exclude>
+					<exclude>config/</exclude>
+				</excludes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -97,7 +102,7 @@
 							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
-							<includeGroupIds>informix,org.springframework,commons-dbcp,commons-pool,commons-logging,log4j</includeGroupIds>
+							<includeGroupIds>informix,org.springframework,commons-dbcp,commons-pool,commons-logging,commons-lang,log4j</includeGroupIds>
 							<outputDirectory>${project.build.directory}/lib/</outputDirectory>
 						</configuration>
 					</execution>

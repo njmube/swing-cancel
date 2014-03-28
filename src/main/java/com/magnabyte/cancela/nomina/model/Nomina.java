@@ -1,10 +1,13 @@
 package com.magnabyte.cancela.nomina.model;
 
+import javax.swing.JProgressBar;
+
 public class Nomina {
 	private Integer claveEmpleado;
 	private String tipoNomina;
 	private Integer periodo;
 	private Integer anio;
+	private JProgressBar progress;
 
 	public Integer getClaveEmpleado() {
 		return claveEmpleado;
@@ -36,6 +39,14 @@ public class Nomina {
 
 	public void setAnio(Integer anio) {
 		this.anio = anio;
+	}
+	
+	public JProgressBar getProgress() {
+		return progress;
+	}
+	
+	public void setProgress(JProgressBar progress) {
+		this.progress = progress;
 	}
 
 	@Override
